@@ -15,7 +15,7 @@ public class CheckGround : MonoBehaviour {
         player = GetComponentInParent<controles>();
 	}
 
-     void OnCollisionStay(Collision col)
+    void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
@@ -23,11 +23,11 @@ public class CheckGround : MonoBehaviour {
         }
     }
 
-     void OnCollisionExit(Collision col)
+    void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
             player.grounded = false;
-        }   
+        }
     }
 }
